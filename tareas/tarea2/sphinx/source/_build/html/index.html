@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Bubble-sort en Python documentation &#8212; Bubble-sort en Python 4-9-2025 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=9331416c"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="bubble-sort-en-python-documentation">
+<h1>Bubble-sort en Python documentation<a class="headerlink" href="#bubble-sort-en-python-documentation" title="Link to this heading">¶</a></h1>
+<p>Add your content using <code class="docutils literal notranslate"><span class="pre">reStructuredText</span></code> syntax. See the
+<a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html">reStructuredText</a>
+documentation for details.</p>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+<section id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">¶</a></h1>
+<p>Codigo que ordena mediante el metodo bubble-sort los elementos de un array.</p>
+<section id="example-code">
+<h2>Example Code<a class="headerlink" href="#example-code" title="Link to this heading">¶</a></h2>
+<p>Aquí está el código que se se ha documentado.</p>
+<p id="module-array">This module defines an object type which can efficiently represent
+an array of basic values: characters, integers, floating point
+numbers.  Arrays are sequence types and behave very much like lists,
+except that the type of objects stored in them is constrained.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="array.ArrayType">
+<span class="sig-prename descclassname"><span class="pre">array.</span></span><span class="sig-name descname"><span class="pre">ArrayType</span></span><a class="headerlink" href="#array.ArrayType" title="Link to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#array.array" title="array.array"><code class="xref py py-class docutils literal notranslate"><span class="pre">array</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="array.array">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">array.</span></span><span class="sig-name descname"><span class="pre">array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">typecode</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">initializer</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#array.array" title="Link to this definition">¶</a></dt>
+<dd><p>Return a new array whose items are restricted by typecode, and
+initialized from the optional initializer value, which must be a list,
+string or iterable over elements of the appropriate type.</p>
+<p>Arrays represent basic values and behave very much like lists, except
+the type of objects stored in them is constrained. The type is specified
+at object creation time by using a type code, which is a single character.
+The following type codes are defined:</p>
+<blockquote>
+<div><p>Type code   C Type             Minimum size in bytes
+‘b’         signed integer     1
+‘B’         unsigned integer   1
+‘u’         Unicode character  2 (see note)
+‘h’         signed integer     2
+‘H’         unsigned integer   2
+‘i’         signed integer     2
+‘I’         unsigned integer   2
+‘l’         signed integer     4
+‘L’         unsigned integer   4
+‘q’         signed integer     8 (see note)
+‘Q’         unsigned integer   8 (see note)
+‘f’         floating point     4
+‘d’         floating point     8</p>
+</div></blockquote>
+<p>NOTE: The ‘u’ typecode corresponds to Python’s unicode character. On
+narrow builds this is 2-bytes on wide builds this is 4-bytes.</p>
+<p>NOTE: The ‘q’ and ‘Q’ type codes are only available if the platform
+C compiler used to build Python supports ‘long long’, or, on Windows,
+‘__int64’.</p>
+<p>Methods:</p>
+<p>append() – append a new item to the end of the array
+buffer_info() – return information giving the current memory info
+byteswap() – byteswap all the items of the array
+count() – return number of occurrences of an object
+extend() – extend array by appending multiple elements from an iterable
+fromfile() – read items from a file object
+fromlist() – append items from the list
+frombytes() – append items from the string
+index() – return index of first occurrence of an object
+insert() – insert a new item into the array at a provided position
+pop() – remove and return item (default last)
+remove() – remove first occurrence of an object
+reverse() – reverse the order of the items in the array
+tofile() – write all items to a file object
+tolist() – return the array converted to an ordinary list
+tobytes() – return the array converted to a string</p>
+<p>Attributes:</p>
+<p>typecode – the typecode character used to create the array
+itemsize – the length in bytes of one array item</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="array.array.append">
+<span class="sig-name descname"><span class="pre">append</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em><span class="sig-paren">)</span><a class="headerlink" href="#array.array.append" title="Link to this definition">¶</a></dt>
+<dd><p>Append new value v to the end of the array.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="array.array.buffer_info">
+<span class="sig-name descname"><span class="pre">buffer_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#array.array.buffer_info" title="Link to this definition">¶</a></dt>
+<dd><p>Return a tuple (address, length) giving the current memory address and the length in items of the buffer used to hold array’s contents.</p>
+<p>The length should be multiplied by the itemsize attribute to calculate
+the buffer length in bytes.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="array.array.byteswap">
+<span class="sig-name descname"><span class="pre">byteswap</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#array.array.byteswap" title="Link to this definition">¶</a></dt>
+<dd><p>Byteswap all items of the array.</p>
+<p>If the items in the array are not 1, 2, 4, or 8 bytes in size, RuntimeError is
+raised.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="array.array.count">
+<span class="sig-name descname"><span class="pre">count</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em><span class="sig-paren">)</span><a class="headerlink" href="#array.array.count" title="Link to this definition">¶</a></dt>
+<dd><p>Return number of occurrences of v in the array.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="array.array.extend">
+<span class="sig-name descname"><span class="pre">extend</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bb</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em><span class="sig-paren">)</span><a class="headerlink" href="#array.array.extend" title="Link to this definition">¶</a></dt>
+<dd><p>Append items to the end of the array.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="array.array.frombytes">
+<span class="sig-name descname"><span class="pre">frombytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buffer</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em><span class="sig-paren">)</span><a class="headerlink" href="#array.array.frombytes" title="Link to this definition">¶</a></dt>
+<dd><p>Appends items from the string, interpreting it as an array of machine values, as if it had been read from a file using the fromfile() method.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="array.array.fromfile">
+<span class="sig-name descname"><span class="pre">fromfile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em><span class="sig-paren">)</span><a class="headerlink" href="#array.array.fromfile" title="Link to this definition">¶</a></dt>
+<dd><p>Read n objects from the file object f and append them to the end of the array.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="array.array.fromlist">
+<span class="sig-name descname"><span class="pre">fromlist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em><span class="sig-paren">)</span><a class="headerlink" href="#array.array.fromlist" title="Link to this definition">¶</a></dt>
+<dd><p>Append items to array from list.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="array.array.fromunicode">
+<span class="sig-name descname"><span class="pre">fromunicode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ustr</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em><span class="sig-paren">)</span><a class="headerlink" href="#array.array.fromunicode" title="Link to this definition">¶</a></dt>
+<dd><p>Extends this array with data from the unicode string ustr.</p>
+<p>The array must be a unicode type array; otherwise a ValueError is raised.
+Use array.frombytes(ustr.encode(…)) to append Unicode data to an array of
+some other type.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="array.array.index">
+<span class="sig-name descname"><span class="pre">index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">9223372036854775807</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em><span class="sig-paren">)</span><a class="headerlink" href="#array.array.index" title="Link to this definition">¶</a></dt>
+<dd><p>Return index of first occurrence of v in the array.</p>
+<p>Raise ValueError if the value is not present.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="array.array.insert">
+<span class="sig-name descname"><span class="pre">insert</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em><span class="sig-paren">)</span><a class="headerlink" href="#array.array.insert" title="Link to this definition">¶</a></dt>
+<dd><p>Insert a new item v into the array before position i.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="array.array.itemsize">
+<span class="sig-name descname"><span class="pre">itemsize</span></span><a class="headerlink" href="#array.array.itemsize" title="Link to this definition">¶</a></dt>
+<dd><p>the size, in bytes, of one array item</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="array.array.pop">
+<span class="sig-name descname"><span class="pre">pop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em><span class="sig-paren">)</span><a class="headerlink" href="#array.array.pop" title="Link to this definition">¶</a></dt>
+<dd><p>Return the i-th element and delete it from the array.</p>
+<p>i defaults to -1.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="array.array.remove">
+<span class="sig-name descname"><span class="pre">remove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em><span class="sig-paren">)</span><a class="headerlink" href="#array.array.remove" title="Link to this definition">¶</a></dt>
+<dd><p>Remove the first occurrence of v in the array.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="array.array.reverse">
+<span class="sig-name descname"><span class="pre">reverse</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#array.array.reverse" title="Link to this definition">¶</a></dt>
+<dd><p>Reverse the order of the items in the array.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="array.array.tobytes">
+<span class="sig-name descname"><span class="pre">tobytes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#array.array.tobytes" title="Link to this definition">¶</a></dt>
+<dd><p>Convert the array to an array of machine values and return the bytes representation.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="array.array.tofile">
+<span class="sig-name descname"><span class="pre">tofile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em><span class="sig-paren">)</span><a class="headerlink" href="#array.array.tofile" title="Link to this definition">¶</a></dt>
+<dd><p>Write all items (as machine values) to the file object f.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="array.array.tolist">
+<span class="sig-name descname"><span class="pre">tolist</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#array.array.tolist" title="Link to this definition">¶</a></dt>
+<dd><p>Convert array to an ordinary list with the same items.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="array.array.tounicode">
+<span class="sig-name descname"><span class="pre">tounicode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#array.array.tounicode" title="Link to this definition">¶</a></dt>
+<dd><p>Extends this array with data from the unicode string ustr.</p>
+<p>Convert the array to a unicode string.  The array must be a unicode type array;
+otherwise a ValueError is raised.  Use array.tobytes().decode() to obtain a
+unicode string from an array of some other type.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="array.array.typecode">
+<span class="sig-name descname"><span class="pre">typecode</span></span><a class="headerlink" href="#array.array.typecode" title="Link to this definition">¶</a></dt>
+<dd><p>the typecode character used to create the array</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">Bubble-sort en Python</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, Ricardo Hidalgo.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
